@@ -64,10 +64,16 @@ function writeToFile(fileName, data) {
     });
 }
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
     inquirer.prompt(questions)
         .then((data) =>{
             console.log(data);
+            writeToFile(data.fileName, data);
         })
+        .catch((error) => {
+            console.log(error);
+        })
+}
+
 // Function call to initialize app
 init();
