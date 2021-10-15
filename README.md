@@ -57,6 +57,7 @@ You will also need a github account. Get one [here](https://github.com/).
 
 4. Your new markdown file will be located here.
 
+    ![gif of usage](develop/img/video.gif)
 ## Built With
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
