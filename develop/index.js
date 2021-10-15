@@ -3,8 +3,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
-const questions = [
-    {
+const questions = [{
         type: "input",
         name: "title",
         message: "What is your project title?"
@@ -30,7 +29,7 @@ const questions = [
         message: "List collaborators if any."
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Chose a license for your app.",
         choices: ["Apache Licence 2.0", "MIT License", "GNU GPLv3"]
@@ -42,33 +41,33 @@ const questions = [
     },
     {
         type: "input",
-        name: "tests",
-        message: "Write tests for your application. Then provide examples on how to run them."
+        name: "email",
+        message: "What is your email?"
     },
     {
         type: "input",
-        name: "email",
-        message: "What is your email?"
+        name: "tests",
+        message: "Write tests for your application. Then provide examples on how to run them."
     }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(`${fileName}.md`, generateMarkdown.generateMarkdown(data), error => {
-        if(error){
+    fs.writeFile(`${fileName}.md`, generateMarkdown(data), "utf8", function (error) {
+        if (error) {
             console.log(error);
-        }
-        else{
+        } else {
             console.log(`Success! Data written to ${fileName}.md.`);
         }
     });
 }
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions)
-        .then((data) =>{
-            console.log(data);
-            writeToFile(data.fileName, data);
+    inquirer
+        .prompt(questions)
+        .then((response) => {
+            console.log(response);
+            writeToFile(response.title, response);
         })
         .catch((error) => {
             console.log(error);

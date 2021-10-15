@@ -3,8 +3,9 @@
 function renderLicenseBadge(license) {
   if (license === "") {
     return "";
+  } else {
+    return `![${license}](${renderLicenseLink(license)})`
   }
-  return `![${license}](${renderLicenseLink(license)})`
 }
 
 // TODO: Create a function that returns the license link
@@ -64,11 +65,11 @@ function generateMarkdown(data) {
   
   ## License
   
-  This project is licensed under the ${data.license[0]}
+  This project is licensed under the ${data.license}
   
   ## Badges
   
-  ${renderLicenseSection()}
+  ${renderLicenseSection(data.license)}
 
   ## Contact Info
   
