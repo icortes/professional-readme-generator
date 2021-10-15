@@ -57,6 +57,8 @@ You will also need a github account. Get one [here](https://github.com/).
 
 4. Your new markdown file will be located here.
 
+    [Walkthrough video of usage](https://watch.screencastify.com/v/nFvatpta3K9wBEXbEvNh)
+    
     ![gif of usage](develop/img/video.gif)
 ## Built With
 
