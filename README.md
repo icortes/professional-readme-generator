@@ -16,10 +16,30 @@ You will also need a github account. Get one [here](https://github.com/).
 
 ### Installing
 
-1. Go [here](https://github.com/icortes/professional-readme-generator) and fork the project to your account.
+1. Fork the project to your account.
 
-![image of fork](develop/img/fork.jpg)
+    ![image of fork](develop/img/fork.jpg)
 
+2. Click the green code button and copy the SSH url. Should look like this:
+    ```
+    git@github.com:<username>/professional-readme-generator.git
+    ```
+3. Open Git and navigate to your desktop.
+    ```
+    cd Desktop
+    ```
+4. Clone the repository to your desktop. You can right click on the terminal to paste the SSH url.
+    ```
+    git clone git@github.com:<username>/professional-readme-generator.git
+    ```
+5. Navigate to the repository and into develop folder.
+    ```
+    cd professional-readme-generator/develop/
+    ```
+6. Download and install inquirer.
+    ```
+    npm install
+    ```
 ## Built With
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
