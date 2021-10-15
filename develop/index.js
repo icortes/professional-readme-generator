@@ -66,7 +66,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((response) => {
-            console.log(response);
+            // console.log(response);
             writeToFile(response.title, response);
         })
         .catch((error) => {

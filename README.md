@@ -24,7 +24,7 @@ You will also need a github account. Get one [here](https://github.com/).
     ```
     git@github.com:<username>/professional-readme-generator.git
     ```
-3. Open Git and navigate to your desktop.
+3. Open Git bash terminal and navigate to your desktop.
     ```
     cd Desktop
     ```
@@ -40,16 +40,27 @@ You will also need a github account. Get one [here](https://github.com/).
     ```
     npm install
     ```
+
+### Usage
+
+1. Now that all the dependencies are installed, to run the program write in terminal:
+
+        node index.js
+
+2. Answer the prompts. A new markdown file will be created when you see:
+
+        Success! Data written to <title>.md.
+
+3. Open file explorer on the current directory.
+
+        explorer .
+
+4. Your new markdown file will be located here.
+
 ## Built With
 
-* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
-## Deployed Link
-
-* [See Live Site](#)
-
+* [Node.js](https://nodejs.org/docs/latest-v15.x/api/)
 
 ## Authors
 
@@ -65,6 +76,4 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code, libraries, packages, or UI was used  / inspired from
-* Inspiration
-* etc
+* Node.js [documentation](https://nodejs.org/docs/latest-v15.x/api/fs.html#fs_fs_writefile_file_data_options_callback)
